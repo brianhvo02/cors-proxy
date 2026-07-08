@@ -1,0 +1,16 @@
+name = "cors-proxy"
+main = "cors-proxy-worker.js"
+compatibility_date = "2024-09-01"
+
+# Optional rate limit. Uncomment to turn it on. limit = requests, period = 10 or 60 seconds.
+# The Worker code only runs the rate check if this binding is present, so it is
+# safe to leave commented out.
+# [[unsafe.bindings]]
+# name = "RATE_LIMITER"
+# type = "ratelimit"
+# namespace_id = "1001"
+# simple = { limit = 100, period = 60 }
+
+# Optional logging for debugging.
+[observability.logs]
+enabled = true
